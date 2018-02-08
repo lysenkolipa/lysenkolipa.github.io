@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/main.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300,300i,400,400i,700|Roboto:300,300i,400" rel="stylesheet">
+    <!--link(href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300,300i,400,400i,700|Roboto:300,300i,400" rel="stylesheet")-->
     <title>Mogo</title>
   </head>
   <body>
@@ -16,14 +16,14 @@
     <section class="hero">
       <div class="container">
         <div class="hero-section-top">
-          <h3 class="hero-secondary-text">Creative Template</h3>
-          <h1 class="hero-main-text">Welcome to MoGo</h1>
+          <h3 class="hero-secondary-title">Creative Template</h3>
+          <h1 class="hero-main-title">Welcome to MoGo</h1>
           <div class="hero-btn_container">
             <button class="btn white-border">learn more</button>
           </div>
         </div>
-        <div class="hero-section-bottom">
-          <nav class="hero-nav"><a class="hero-nav_item" href="#"><span class="header-bottom_nav_item-number">01</span><span class="header-bottom_nav_item-text">INTO</span></a><a class="header-bottom_nav_item" href="#"><span class="header-bottom_nav_item-number">02</span><span class="header-bottom_nav_item-text">WORK</span></a><a class="header-bottom_nav_item" href="#"><span class="header-bottom_nav_item-number">03</span><span class="header-bottom_nav_item-text">ABOUT</span></a><a class="header-bottom_nav_item" href="#"><span class="header-bottom_nav_item-number">04</span><span class="header-bottom_nav_item-text">CONTACTS</span></a></nav>
+        <div class="hero-bottom">
+          <nav class="hero-nav"><a class="hero-nav_item" href="#"><span class="item-number">01</span><span class="item-text">INTO</span></a><a class="hero_nav_item" href="#"><span class="item-number">02</span><span class="item-text">WORK</span></a><a class="hero_nav_item" href="#"><span class="item-number">03</span><span class="item-text">ABOUT</span></a><a class="hero_nav_item" href="#"><span class="item-number">04</span><span class="item-text">CONTACTS</span></a></nav>
         </div>
       </div>
     </section>
@@ -33,88 +33,71 @@
           <h2 class="title-small">What we do</h2>
           <h3 class="title-big">Story about us</h3>
         </div>
-        <p class="about-text">
+        <p class="about-text paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
           ex ea commodo consequat.
         </p>
         <div class="about-images">
-          <div class="about-images_list"><a class="tile" href="#"><img class="about-images_list_img" src="../images/layer-44.jpg" alt="img">
-              <div class="tile-content"><img class="about-images_hover-img" src="../images/users.png">
-                <h6 class="about-images_hover-title">super team</h6>
-              </div></a></div>
-          <div class="about-images_list"><a class="tile" href="#"><img class="about-images_list_img" src="../images/layer-39.jpg" alt="img">
-              <div class="tile-content"><img class="about-images_hover-img" src="../images/users.png">
-                <h6 class="about-images_hover-title">super team</h6>
-              </div></a></div>
-          <div class="about-images_list"><a class="tile" href="#"><img class="about-images_list_img" src="../images/layer-41.jpg" alt="img">
-              <div class="tile-content"><img class="about-images_hover-img" src="../images/users.png">
-                <h6 class="about-images_hover-title">super team</h6>
-              </div></a></div>
+          <div class="about-images_list">
+            <div class="tile"><img class="about-images_list_img" src="../images/layer-44.jpg" alt="img">
+              <div class="tile-content"><img class="about-images_hover-img" src="../images/users.png"><span class="about-images_hover-title">super team</span></div>
+            </div>
+          </div>
+          <div class="about-images_list">
+            <div class="tile"><img class="about-images_list_img" src="../images/layer-39.jpg" alt="img">
+              <div class="tile-content"><img class="about-images_hover-img" src="../images/users.png"><span class="about-images_hover-title">super team</span></div>
+            </div>
+          </div>
+          <div class="about-images_list">
+            <div class="tile"><img class="about-images_list_img" src="../images/layer-41.jpg" alt="img">
+              <div class="tile-content"><img class="about-images_hover-img" src="../images/users.png"><span class="about-images_hover-title">super team</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <div class="about-bottom">
-      <div class="container">
-        <ul class="about-bottom_list">
-          <li class="about-bottom_item">
-            <p class="about-bottom_item-number">42</p>
-            <p class="about-bottom_item-text">web design projects</p>
-          </li>
-          <li class="about-bottom_item">
-            <p class="about-bottom_item-number">123</p>
-            <p class="about-bottom_item-text">happy client</p>
-          </li>
-          <li class="about-bottom_item">
-            <p class="about-bottom_item-number">15</p>
-            <p class="about-bottom_item-text">award winner</p>
-          </li>
-          <li class="about-bottom_item">
-            <p class="about-bottom_item-number">99</p>
-            <p class="about-bottom_item-text">cup of coffee</p>
-          </li>
-          <li class="about-bottom_item">
-            <p class="about-bottom_item-number">24</p>
-            <p class="about-bottom_item-text">members</p>
-          </li>
-        </ul>
+    <section class="facts">
+      <div class="container facts-wrapper">
+        <div class="facts_item first"><span class="facts_item-number">42</span><span class="facts_item-text">web design projects</span></div>
+        <div class="facts_item second"><span class="facts_item-number">123</span><span class="facts_item-text">happy client</span></div>
+        <div class="facts_item third"><span class="facts_item-number">15</span><span class="facts_item-text">award winner</span></div>
+        <div class="facts_item fourth"><span class="facts_item-number">99</span><span class="facts_item-text">cup of coffee</span></div>
+        <div class="facts_item fifth"><span class="facts_item-number">24</span><span class="facts_item-text">members</span></div>
       </div>
-    </div>
+    </section>
     <section class="services">
       <div class="container">
         <div class="title title-with-bottom-line">
           <h2 class="title-small">We work with</h2>
           <h3 class="title-big">amazing services</h3>
         </div>
-        <ul class="services-list_top">
-          <li class="services-list_top-item-1">
-            <h4 class="services_item-header">Photography</h4>
-            <p class="services_item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-          </li>
-          <li class="services-list_top-item-2">
-            <h4 class="services_item-header">Web Design</h4>
-            <p class="services_item-text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-          </li>
-          <li class="services-list_top-item-3">
-            <h4 class="services_item-header">Creativity</h4>
-            <p class="services_item-text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-          </li>
-        </ul>
-        <hr class="services_hr">
-        <ul class="services-list_bottom">
-          <li class="services-list_bottom-item-1">
-            <h4 class="services_item-header">SEO</h4>
-            <p class="services_item-text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-          </li>
-          <li class="services-list_bottom-item-2">
-            <h4 class="services_item-header">Css/Html</h4>
-            <p class="services_item-text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
-          </li>
-          <li class="services-list_bottom-item-3">
-            <h4 class="services_item-header">digital</h4>
-            <p class="services_item-text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-          </li>
-        </ul>
+        <div class="services-wrapper">
+          <div class="services-list_item box-1">
+            <h6 class="services_header">Photography</h6>
+            <p class="services_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+          <div class="services-list_item box-2">
+            <h6 class="services_header">Web Design</h6>
+            <p class="services_text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+          <div class="services-list_item box-3">
+            <h6 class="services_header">Creativity</h6>
+            <p class="services_text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+          <div class="services-list_item box-4">
+            <h6 class="services_header">SEO</h6>
+            <p class="services_text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+          </div>
+          <div class="services-list_item box-5">
+            <h6 class="services_header">Css/Html</h6>
+            <p class="services_text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+          </div>
+          <div class="services-list_item box-6">
+            <h6 class="services_header">digital</h6>
+            <p class="services_text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+        </div>
       </div>
     </section>
     <section class="features">
@@ -126,25 +109,31 @@
         <div class="features-container_img"><img class="features-container_img_pic-1" src="../images/display-bg-768x1024.png"><img class="features-container_img_pic-2" src="../images/white.png"></div>
       </div>
     </section>
-    <section class="what-we-do">
+    <section class="service-2">
       <div class="container">
         <div class="title title-with-bottom-line">
           <h2 class="title-small">Service</h2>
           <h3 class="title-big">what we do</h3>
         </div>
-        <p class="what-we-do_text">
+        <p class="service-2_text paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <div class="what-we-do_container">
-          <div class="what-we-do_container_img"><img class="what-we-do_img" src="../images/layer-43.png" alt="image"></div>
-          <div class="what-we-do_accordion">
-            <div class="what-we-do_accordion_item">
-              <input class="what-we-do_accordion_item-input" id="tab-one" type="radio" name="tabs">
-              <label class="what-we-do_accordion_item-label-1" for="tab-one">photography</label>
-              <div class="what-we-do_accordion_item-tab-content scrollbar" id="style-1">
-                <p class="what-we-do_accordion_item-tab-content_text">
+        <div class="service-2_container">
+          <div class="service-2_container_img"><img class="service-2_img" src="../images/layer-43.png" alt="image"></div>
+          <div class="service-2_accordion">
+            <div class="service-2_accordion_item">
+              <input class="service-2_accordion_item-input" id="tab-one" type="radio" name="tabs">
+              <label class="service-2_accordion_item-label-1" for="tab-one">photography</label>
+              <div class="service-2_accordion_item-tab-content scrollbar" id="style-1">
+                <p class="service-2_accordion_item-tab-content_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                   ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -154,11 +143,17 @@
                 </p>
               </div>
             </div>
-            <div class="what-we-do_accordion_item">
+            <div class="service-2_accordion_item">
               <input id="tab-two" type="radio" name="tabs">
-              <label class="what-we-do_accordion_item-label-2" for="tab-two">creativity</label>
-              <div class="what-we-do_accordion_item-tab-content scrollbar" id="style-2">
-                <p class="what-we-do_accordion_item-tab-content_text">
+              <label class="service-2_accordion_item-label-2" for="tab-two">creativity</label>
+              <div class="service-2_accordion_item-tab-content scrollbar" id="style-2">
+                <p class="service-2_accordion_item-tab-content_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                   ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -168,11 +163,17 @@
                 </p>
               </div>
             </div>
-            <div class="what-we-do_accordion_item">
+            <div class="service-2_accordion_item">
               <input id="tab-tree" type="radio" name="tabs">
-              <label class="what-we-do_accordion_item-label-3" for="tab-tree">web gesign</label>
-              <div class="what-we-do_accordion_item-tab-content scrollbar" id="style-3">
-                <p class="what-we-do_accordion_item-tab-content_text">
+              <label class="service-2_accordion_item-label-3" for="tab-tree">web gesign</label>
+              <div class="service-2_accordion_item-tab-content scrollbar" id="style-3">
+                <p class="service-2_accordion_item-tab-content_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                   ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                   ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -186,7 +187,7 @@
         </div>
       </div>
     </section>
-    <div class="what-we-do_slider">
+    <div class="service-2_slider">
       <div class="container slider-container">
         <div class="slider my-slider">
           <input class="slider_activator" type="radio" name="carousel" id="F" checked="checked">
@@ -207,35 +208,26 @@
           <div class="slider_track">
             <div class="slider_slide">
               <div class="slider_slide-container">
-                <div class="what-we-do_slider-list_block"><img class="what-we-do_slider-list_block-img" src="../images/speech-4.svg"></div>
-                <ul class="what-we-do_slider-list_block-right">
-                  <li class="what-we-do_slider-list_item-1">
-                    <p class="what-we-do_slider-list_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                  </li>
-                  <li class="what-we-do_slider-list_author">Jon Doe</li>
-                </ul>
+                <div class="service-2_slider-list_block"><img class="service-2_slider-list_block-img" src="../images/speech-4.svg"></div>
+                <div class="service-2_slider-text">
+                  <blockquote class="service-2_slider-list_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</blockquote><span class="service-2_slider-list_author">Jon Doe</span>
+                </div>
               </div>
             </div>
             <div class="slider_slide">
               <div class="slider_slide-container">
-                <div class="what-we-do_slider-list_block"><img class="what-we-do_slider-list_block-img" src="../images/speech-4.svg"></div>
-                <ul class="what-we-do_slider-list_block-right">
-                  <li class="what-we-do_slider-list_item-1">
-                    <p class="what-we-do_slider-list_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                  </li>
-                  <li class="what-we-do_slider-list_author">Jon Doe</li>
-                </ul>
+                <div class="service-2_slider-list_block"><img class="service-2_slider-list_block-img" src="../images/speech-4.svg"></div>
+                <div class="service-2_slider-text">
+                  <blockquote class="service-2_slider-list_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</blockquote><span class="service-2_slider-list_author">Jon Doe</span>
+                </div>
               </div>
             </div>
             <div class="slider_slide">
               <div class="slider_slide-container">
-                <div class="what-we-do_slider-list_block"><img class="what-we-do_slider-list_block-img" src="../images/speech-4.svg"></div>
-                <ul class="what-we-do_slider-list_block-right">
-                  <li class="what-we-do_slider-list_item-1">
-                    <p class="what-we-do_slider-list_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                  </li>
-                  <li class="what-we-do_slider-list_author">Jon Doe</li>
-                </ul>
+                <div class="service-2_slider-list_block"><img class="service-2_slider-list_block-img" src="../images/speech-4.svg"></div>
+                <div class="service-2_slider-text">
+                  <blockquote class="service-2_slider-list_text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</blockquote><span class="service-2_slider-list_author">Jon Doe</span>
+                </div>
               </div>
             </div>
           </div>
@@ -252,7 +244,7 @@
           <h2 class="title-small">Who we are</h2>
           <h3 class="title-big">meet our team</h3>
         </div>
-        <p class="ourTeam-text">
+        <p class="ourTeam-text paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
           ex ea commodo consequat.
@@ -309,7 +301,7 @@
           <h2 class="title-small">Who we do</h2>
           <h3 class="title-big">some of our work</h3>
         </div>
-        <p class="someOurWork-text">
+        <p class="someOurWork-text paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.
@@ -421,49 +413,37 @@
           <h2 class="title-small">Happy Clients</h2>
           <h3 class="title-big">what people say</h3>
         </div>
-        <div class="clients-block">
-          <div class="clients-block-1"><img class="clients-block_img" src="../images/layer-47.png">
-            <div class="clients-block-1_info">
-              <div class="clients-block-1_info-title">
-                <h2 class="title-small clients-title-1">Matthew Dix</h2>
-                <h3 class="title-big clients-title-2">Graphic Design</h3>
-              </div>
+        <div class="clients-wrapper">
+          <div class="clients-block c-1"><img class="clients-img" src="../images/layer-47.jpg">
+            <div class="clients-block_info">
+              <h4 class="clients-main_title">Matthew Dix<i class="clients-text">Graphic Design</i></h4>
               <p class="clients_info-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
               </p>
             </div>
           </div>
-          <div class="clients-block-2"><img class="clients-block_img" src="../images/layer-49.png">
-            <div class="clients-block-2_info">
-              <div class="clients-block-1_info-title">
-                <h2 class="title-small clients-title-1">Matthew Dix</h2>
-                <h3 class="title-big clients-title-2">Graphic Design</h3>
-              </div>
+          <div class="clients-block c-2"><img class="clients-img" src="../images/layer-49.jpg">
+            <div class="clients-block_info">
+              <h4 class="clients-main_title">Jaelynn Castillo<i class="clients-text">Graphic Design</i></h4>
               <p class="clients_info-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam
               </p>
             </div>
           </div>
-          <div class="clients-block-3"><img class="clients-block_img" src="../images/layer-50.png">
-            <div class="clients-block-1_info">
-              <div class="clients-block-3_info-title">
-                <h2 class="title-small clients-title-1">Matthew Dix</h2>
-                <h3 class="title-big clients-title-2">Graphic Design</h3>
-              </div>
+          <div class="clients-block c-3"><img class="clients-img" src="../images/layer-50.jpg">
+            <div class="clients-block_info">
+              <h4 class="clients-main_title">Nick Karvounis<i class="clients-text">Graphic Design</i></h4>
               <p class="clients_info-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+                Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam
               </p>
             </div>
           </div>
-          <div class="clients-block-4"><img class="clients-block_img" src="../images/layer-51.png">
-            <div class="clients-block-4_info">
-              <div class="clients-block-1_info-title">
-                <h2 class="title-small clients-title-1">Matthew Dix</h2>
-                <h3 class="title-big clients-title-2">Graphic Design</h3>
-              </div>
+          <div class="clients-block c-4"><img class="clients-img" src="../images/layer-51.jpg">
+            <div class="clients-block_info">
+              <h4 class="clients-main_title">Mike Petrucci<i class="clients-text">Graphic Design</i></h4>
               <p class="clients_info-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
@@ -553,7 +533,7 @@
               <li class="footer-block_subscribe-list_social_icons"><img class="footer-block_subscribe-list_social_icons-img" src="../images/tumblr.svg" alt="tumblr"></li>
             </ul>
             <div class="footer-block_subscribe-input">
-              <input class="footer-block_subscribe-input_area" type="e-mail" value="Your Email...">
+              <input class="footer-block_subscribe-input_area" type="email" value="Your Email...">
               <button class="footer-block_subscribe-input_btn" type="submit">subscribe</button>
             </div>
           </div>
