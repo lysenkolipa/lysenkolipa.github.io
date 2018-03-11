@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#loginform').validate({
         submitHandler: function(form) { 
             form.submit(); 
-        }
+
         rules: {
             login: {
                 required: true,
@@ -27,6 +27,7 @@ $(document).ready(function() {
                 maxlength: 'Password must be at most 16 characters'
             }
         },
+    }
         
     });
 });
