@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$('#submit_button').click(function() {
     $('#loginform').validate({
         rules: {
             login: {
@@ -23,6 +23,6 @@ $(document).ready(function() {
                 minlength: 'Password must be at least 4 characters',
                 maxlength: 'Password must be at most 16 characters'
             }
-        } 
+        }
     });
 });
