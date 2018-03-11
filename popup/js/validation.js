@@ -24,5 +24,6 @@ $(document).ready(function() {
                 maxlength: 'Password must be at most 16 characters'
             }
         }
+        submitHandler: function(form) { form.submit(); }
     });
 });
