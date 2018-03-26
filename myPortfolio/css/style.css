@@ -1,5 +1,5 @@
 body {
-  width: 100wh;
+  max-width: 1900px;
   height: 90vh;
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
@@ -77,17 +77,6 @@ p {
   }
 }
 
-a {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: #42DCA3;
-}
-
-a:focus, a:hover {
-  text-decoration: none;
-  color: #1d9b6c;
-}
 
 #mainNav {
   font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -100,8 +89,8 @@ a:focus, a:hover {
 #mainNav .navbar-toggler {
   font-size: 14px;
   padding: 11px;
-  color: white;
-  border: 1px solid white;
+  color: salmon;
+  border: 1px solid salmon;
 }
 
 #mainNav .navbar-brand {
@@ -119,7 +108,7 @@ a:focus, a:hover {
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
+  color: lightsalmon;
   outline: none;
   background-color: transparent;
 }
@@ -173,8 +162,9 @@ a:focus, a:hover {
 }
 
 @media (min-width: 768px) {
-  height: 100%;
-  padding: 0;
+  height:100%;
+  padding:0;
+
   .intro-body .brand-heading {
     font-size: 100px;
   }
@@ -192,14 +182,14 @@ a:focus, a:hover {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  color: white;
-  border: 2px solid white;
-  border-radius: 100% !important;
+  color: salmon;
+  border: 2px solid salmon;
+  border-radius: 50% !important;
   background: transparent;
 }
 
 .btn-circle:focus, .btn-circle:hover {
-  color: white;
+  color: darksalmon;
   outline: none;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -213,10 +203,18 @@ a:focus, a:hover {
   color: white;
 }
 
-#map {
-  width: 100%;
-  height: 300px;
+.my-projects {
+  width:150px;
+  color: black;
+  margin: 5px;
+
 }
+.project-container {
+  display:flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap;
+  }
 
 @media (min-width: 992px) {
   .content-section {
@@ -230,7 +228,8 @@ a:focus, a:hover {
 
 .btn {
   font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 200;
+  font-size: 14px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -239,16 +238,16 @@ a:focus, a:hover {
 }
 
 .btn-default {
-  color: #42DCA3;
-  border: 1px solid #42DCA3;
+  color: salmon;
+  border: 1px solid salmon;
   background-color: transparent;
 }
 
 .btn-default:focus, .btn-default:hover {
   color: black;
-  border: 1px solid #42DCA3;
+  border: 1px solid salmon;
   outline: none;
-  background-color: #42DCA3;
+  background-color: salmon;
 }
 
 ul.banner-social-buttons {
