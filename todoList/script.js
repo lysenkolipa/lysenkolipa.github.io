@@ -1,5 +1,5 @@
 
-// let tempObj = {};
+
 let todoList = [];
 if (localStorage.getItem('todo')){
     todoList = JSON.parse(localStorage.getItem('todo'));
@@ -22,21 +22,11 @@ function showTodoList() {
 
         ul.appendChild(li);
     }
-
-    let closeBtn = document.getElementsByClassName('close');
-    for( key in closeBtn) {
-        closeBtn[key].onclick = function () {
-            let id = this.parentElement.getAttribute('data-id');
-            this.parentElement.remove();
-            todoList = todoList.filter(item => item.id !== id);
-            saveTodoListToLocalStorage(todoList);
-        }
-    }
 }
 
 
 function Todo (name) {
-    this.id = function () { return Math.floor((1 + Math.random()) * 0x10000)
+    this.id =  function(){ return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
             .substring(1);
     }();
@@ -46,12 +36,14 @@ function Todo (name) {
 
 //create new task in taskList
 let form = document.querySelector('form');
-form.addEventListener('submit', function() {
-    let task = document.getElementById('add-task').value;
+form.addEventListener('submit', () => {
+    event.preventDefault();
+
+    let task = form.querySelector('#add-task').value;
     if (task) {
         let todo = new Todo(task);
         todoList.push(todo);
-        document.getElementById('add-task').value = '';
+        form.querySelector('#add-task').value = '';
         saveTodoListToLocalStorage(todoList);
         showTodoList();
     }
@@ -60,7 +52,7 @@ form.addEventListener('submit', function() {
 
 //add effects at click on LI
 let list = document.querySelector('ul');
-list.addEventListener('click', function(event) {
+list.addEventListener('click', (event) => {
     if(event.target.tagName === 'LI') {
         event.target.classList.toggle('checked');
         changeStatus();
@@ -99,7 +91,7 @@ function saveTodoListToLocalStorage(arr) {
     localStorage.setItem('todo', str);
 }
 
-document.querySelector('#clear').addEventListener('click', function(event) {
+document.querySelector('#clear').addEventListener('click', () => {
     todoList = JSON.parse(localStorage.getItem('todo'));
     if(todoList.length > 0) {
         todoList = [];
@@ -107,9 +99,8 @@ document.querySelector('#clear').addEventListener('click', function(event) {
         document.getElementById('task-list').innerHTML = todoList;
     }
 });
-document.querySelector('#completed').addEventListener('click', function(event) {
+document.querySelector('#completed').addEventListener('click', () => {
     todoList = JSON.parse(localStorage.getItem('todo'));
-    // console.log(todoList);
     let html = '';
     for(let key in todoList) {
         if(todoList[key].status === true) {
@@ -120,9 +111,8 @@ document.querySelector('#completed').addEventListener('click', function(event) {
     ul.innerHTML = html;
 
 });
-document.querySelector('#all').addEventListener('click', function(event) {
-    showTodoList();
-});
+document.querySelector('#all').addEventListener('click', () => showTodoList());
+
 
 
 
