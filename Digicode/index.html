@@ -3,44 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Digicode</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!---HEADER--->
-    <header class="container header">
-        <div class="navbar">
-            <div class="dropdown">
-                <button class="dropbtn">Home</button>
-            </div>
-            <div class="dropdown-content">
-                <a class="dropdown-link" href="#">Home 1</a>
-                <a class="dropdown-link" href="#">Home 2</a>
-                <a class="dropdown-link" href="#">Home 3</a>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Sports</button>
-            </div>
-            <div class="dropdown-content">
-                <a class="dropdown-link" href="#">Sports 1</a>
-                <a class="dropdown-link" href="#">Sports 2</a>
-                <a class="dropdown-link" href="#">Sports 3</a>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Casino</button>
-            </div>
-            <div class="dropdown-content">
-                <a class="dropdown-link" href="#">Casino 1</a>
-                <a class="dropdown-link" href="#">Casino 2</a>
-                <a class="dropdown-link" href="#">Casino 3</a>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Games</button>
-            </div>
-            <div class="dropdown-content">
-                <a class="dropdown-link" href="#">Mega Moolah</a>
-                <a class="dropdown-link" href="#">The curse of the black</a>
-                <a class="dropdown-link" href="#">Super slots attack</a>
-            </div>
+<div class="container">
+    <header class="header">
+        <div class="nav-wrapper">
+            <nav class="nav-block">
+                <ul class="drop-down js-drop-down">
+                    <li><a class="nav-button" href="#">Home</a></li>
+                    <li><a href="#">Home 1</a></li>
+                    <li><a href="#">Home 2</a></li>
+                    <li><a href="#">Home 3</a></li>
+                </ul>
+                <ul class="drop-down js-drop-down">
+                    <li><a class="nav-button" href="#">Sport</a></li>
+                    <li><a class="dropdown-link" href="#">Sports 1</a></li>
+                    <li><a class="dropdown-link" href="#">Sports 2</a></li>
+                    <li><a class="dropdown-link" href="#">Sports 3</a></li>
+                </ul>
+                <ul class="drop-down js-drop-down">
+                    <li><a class="nav-button" href="#">Casino</a></li>
+                    <li><a class="dropdown-link" href="#">Casino 1</a></li>
+                    <li><a class="dropdown-link" href="#">Casino 2</a></li>
+                    <li><a class="dropdown-link" href="#">Casino 3</a></li>
+                </ul>
+                <ul class="drop-down js-drop-down">
+                    <li><a class="nav-button" href="#">Games</a></li>
+                    <li><a class="dropdown-link" href="#">Mega Moolah</a></li>
+                    <li><a class="dropdown-link" href="#">The curse of the black</a></li>
+                    <li><a class="dropdown-link" href="#">Super slots attack</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="languages-wrapper">
             <nav>
@@ -56,12 +50,13 @@
             </nav>
         </div>
     </header>
-    <aside class="logo">  L O G O  </aside>
-    <main class="container main">
+    <a class="logo" href="index.html">  L  O  G  O  </a>
+
+    <main class="main">
         <div class="left-block_wrapper">
             <section class="left-block">
                 <div class="content-wrapper">
-                    <h2 class="title">Page title</h2>
+                    <h1 class="title">Page title</h1>
                     <hr>
                     <p class="text-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -71,7 +66,7 @@
                         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
                         Ipsum.</p>
 
-                    <p class="text-block">It is a long established fact that a reader will be distracted by the readable
+                    <p class="text-block">It is a long esaccordionlished fact that a reader will be distracted by the readable
                         content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
                         more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
                         making it look like readable English. Many desktop publishing packages and web page editors now
@@ -83,7 +78,7 @@
                         in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
                         McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
                         obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-                        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                        word in classical literature, discovered the undoubaccordionle source. Lorem Ipsum comes from sections
                         1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
                         written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
                         Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
@@ -101,7 +96,7 @@
                         the Internet tend to repeat predefined chunks as necessary, making this the first true generator on
                         the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model
                         sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum
-                        is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                        is therefore always free from repetition, injected humour, or non-characteristic words etc.</p><br>
                     <div class="js-content"></div>
                 </div>
             </section>
@@ -109,38 +104,40 @@
         <div class="right-block_wrapper">
             <section class="right-block">
                 <div class="content-wrapper">
-                    <div class="tab">
-                        <input id="tab-four" type="radio" name="tabs2">
-                        <label for="tab-four">Click to open</label>
-                        <div class="tab-content">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the indus book.  desktop publishing software like Aldus PageMaker including versions
-                                of Lorem ageMaker including versions of Lorem Ipsum...</p>
+                    <div class="accordion">
+                        <a href="#accordion1" aria-controls="accordion1" class="accordion-trigger js-accordion-trigger"></a>
+                        <div id="accordion1" class="accordion-panel js-accordion-panel">
+                            <div class="accordion-panel__inner">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the indus book.  desktop publishing software like Aldus PageMaker including versions
+                                    of Lorem ageMaker including versions of Lorem Ipsum... </p>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab blue">
-                        <input id="tab-five" type="radio" name="tabs2">
-                        <label for="tab-five">Click to open</label>
-                        <div class="tab-content">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the indus book.  desktop publishing software like Aldus PageMaker including versions
-                                of Lorem ageMaker including versions of Lorem Ipsum...</p>
+                        <a href="#accordion2" aria-controls="accordion2" class="accordion-trigger js-accordion-trigger"></a>
+                        <div id="accordion2" class="accordion-panel js-accordion-panel">
+                            <div class="accordion-panel__inner">
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the indus book.  desktop publishing software like Aldus PageMaker including versions
+                                    of Lorem ageMaker including versions of Lorem Ipsum... </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab blue">
-                        <input id="tab-six" type="radio" name="tabs2">
-                        <label for="tab-six">Click to open</label>
-                        <div class="tab-content">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the indus book.  desktop publishing software like Aldus PageMaker including versions
-                                of Lorem ageMaker including versions of Lorem Ipsum...</p>
+                        <a href="#accordion3" aria-controls="accordion3" class="accordion-trigger js-accordion-trigger"></a>
+                        <div id="accordion3" class="accordion-panel js-accordion-panel">
+                            <div class="accordion-panel__inner">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                    been the indus book.  desktop publishing software like Aldus PageMaker including versions
+                                    of Lorem ageMaker including versions of Lorem Ipsum... </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
-    <footer class="footer container">
+
+    <footer class="footer">
         <div class="copyright">
             <small>2003 - 2011 © Copyright 10Bet.com Ltd. All rights reserved.</small>
         </div>
@@ -152,6 +149,7 @@
 
         </nav>
     </footer>
-    <script src="content.js"></script>
+</div>
+    <script src="js/content.js"></script>
 </body>
 </html>
