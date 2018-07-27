@@ -1,120 +1,177 @@
-( function () {
-    const form = document.querySelector('.form'),
-        fname = form.querySelector('.firstName'),
-        lname = form.querySelector('.lastName'),
-        country = form.querySelector('.country'),
-        password = form.querySelector('.password'),
-        passwordConfirmation = form.querySelector('.passwordConfirmation'),
-        email = form.querySelector('.email'),
-        note = form.querySelector('.note'),
-        fields = form.querySelectorAll('.field');
+class Form
+{
+ constructor(formSelector, fields) {
+     this.formSelector = formSelector;
+     this.fieldSet = fields;
+     this.validator = new Validator(this);
+ }
 
-    const errorGenerator = function (text) {
-        const error = document.createElement('div');
-        error.className = 'error';
-        error.style.color = 'red';
-        error.innerHTML = text;
-        return error;
+ fieldSetValidate() {
+     this.fieldSet.forEach(function (field) {
+         field.validate();
+     });
+ }
+}
+
+class Field
+{
+    constructor(type, selector) {
+        this.type = type;
+        this.selector = selector;
+        this.validator = new Validator(this);
+        this.validateSet = [this.checkEmpty];
     }
-    const removeErrorMessage = function () {
-        const errors = form.querySelectorAll('.error');
-        for(let i = 0; i < errors.length; i++) {
-            errors[i].remove();
-            form[i].style.borderColor= 'green';
 
+    checkEmpty(context) {
+        let domElement = document.querySelector(context.selector);
+        if(!domElement.value) {
+            context.validator.generateError('Can not be empty!');
         }
     }
 
-    const checkFields = function () {
-        for(let i = 0; i < fields.length; i++) {
-            if(!fields[i].value) {
-                const error = errorGenerator('Can not be empty!');
-                form[i].style.borderColor = 'red';
-                form[i].parentElement.insertBefore(error, fields[i]);
-            }
-        }
+    validate() {
+        let self = this;
+        this.validateSet.forEach(function (validateMethod) {
+            validateMethod(self);
+        })
+    }
+}
+
+class TextField extends Field
+{
+    constructor(type, selector) {
+        super(type, selector);
+        this.validateSet.push(this.textValidate);
     }
 
-    const checkPasswordMatch = function () {
-        if(password.value !== passwordConfirmation.value) {
-            const error = errorGenerator('Password does not match!');
-            password.style.borderColor = 'red';
-            passwordConfirmation.style.borderColor = 'red';
-            password.parentElement.insertBefore(error,password);
-            password.focus();
+    textValidate(context)
+    {
+        let domElement = document.querySelector(context.selector);
+        if(domElement.value.match(/"/i) || domElement.value.match(/'/i)) {
+            context.validator.generateError('Contains \" \' symbol(s)');
         }
 
+        if(domElement.value.length  > 0 && domElement.value.length  < 3) {
+            context.validator.generateError('Text should has more than 2 charts');
+        }
+    }
+}
+
+class PassField extends Field
+{
+    constructor(type, selector, passwordConfirmation) {
+        super(type, selector);
+        this.passwordConfirmation = passwordConfirmation;
+        this.validateSet.push(this.passwordValidate);
     }
 
-    const checkEmail = function () {
+    passwordValidate(context)
+    {
+        let domElement = document.querySelector(context.selector);
+        let conf = document.querySelector(context.passwordConfirmation.selector);
+        if(domElement.value !== conf.value) {
+            context.validator.generateError('Password does not match!');
+        }
+    }
+}
+
+class EmailField extends Field
+{
+    constructor(type, selector) {
+        super(type, selector);
+        this.validateSet.push(this.emailValidate);
+    }
+
+    emailValidate(context)
+    {
+        let domElement = document.querySelector(context.selector);
         let regExp = "([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$";
-        if(!email.value.match(regExp)) {
-            const error = errorGenerator('E-mail does not correct! E-mail should contains @');
-            email.style.borderColor = 'red';
-            email.parentElement.insertBefore(error,email);
-            email.focus();
-        }
-        if (email.value === "") {
-            removeErrorMessage();
-            checkFields();
+        if(!domElement.value.match(regExp)) {
+            context.validator.generateError('E-mail does not correct! E-mail should contains @');
         }
     }
+}
 
-    const checkTextField = function (textInput) {
-        if(textInput.value.match(/"/i) || textInput.value.match(/'/i)) {
-            let error = errorGenerator('Contains \" \' symbol(s)');
-            textInput.style.borderColor = 'red';
-            textInput.parentElement.insertBefore(error, textInput);
-            textInput.focus();
+class ErrorGenerator
+{
+    constructor() {
+        this.errorContainer = document.createElement('div');
+        console.log(this.errorContainer);
+    }
+    generate(errorText) {
+        this.errorContainer.className = 'error';
+        this.errorContainer.style.color = 'red';
+        this.errorContainer.innerHTML = errorText;
+        return this;
+    }
+
+    getError()
+    {
+        return this.errorContainer;
+    }
+}
+
+class Validator
+{
+    constructor(element) {
+        this.element = element;
+        this.errorGenerator = new ErrorGenerator();
+    }
+
+    generateError(text) {
+        let error = this.errorGenerator.generate(text).getError();
+        let domElement = document.querySelector(this.element.selector);
+        domElement.parentElement.insertBefore(error, domElement);
+        domElement.style.borderColor = 'red';
+        domElement.focus();
+    }
+
+    removeErrorStyles() {
+        const errors = document.querySelectorAll('.error');
+        if (errors.length) {
+            errors.forEach(function (error) {
+                error.nextSibling.style.borderColor = 'green';
+                error.remove();
+            });
         }
     }
+}
 
-    const checkSizeText = function(text) {
-        if(text.value.length  > 1) {
-            checkTextField(text);
-
-        } else  if (text.value.length  > 0 && text.value.length  < 3) {
-            let error = errorGenerator('Text should has more than 2 charts');
-            text.style.borderColor = 'red';
-            text.parentElement.insertBefore(error, text);
-            text.focus();
-        }
+class Submit
+{
+    constructor(form, selector) {
+        this.form = form;
+        this.selector = selector;
     }
 
-    const checkFName = function() {
-        checkSizeText(fname);
+    init() {
+        let self = this;
+        let formElement =  document.querySelector('#form');
+
+        formElement.addEventListener('submit', function (event) {
+            event.preventDefault();
+            self.form.validator.removeErrorStyles();
+            self.form.fieldSetValidate();
+            if(formElement.querySelectorAll('.error').length <= 0) {
+                document.querySelector('.modal').style.display = 'block';
+            }
+        })
     }
-    const checkLName = function() {
-        checkSizeText(lname);
-    }
-    const checkNote = function() {
-        checkTextField(note);
-    }
+}
 
-    const validate = function (event){
-        const errors = form.querySelectorAll('.error');
-        if(errors.length > 0){
-            // event.preventDefault();
-            console.log('You have errors')
-        } else {
-            document.querySelector('.modal').style.display = 'block';
-        }
-    }
+const passConfirmField = new Field('passwordConfirmation', '.passwordConfirmation');
+const fields = [
+    new TextField('fname', '.firstName'),
+    new TextField('lname', '.lastName'),
+    new TextField('birthday', '.birthday'),
+    new TextField('country', '.country'),
+    new TextField('address', '.address'),
+    passConfirmField,
+    new PassField('password', '.password', passConfirmField),
+    new EmailField('email', '.email'),
+    new TextField('note', '.note'),
+];
 
-
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        removeErrorMessage();
-        checkFields();
-        checkPasswordMatch();
-        checkEmail();
-        checkFName();
-        checkLName();
-        checkNote();
-        validate();
-
-
-    })
-
-})()
+const form = new Form('.form', fields);
+const submit = new Submit(form);
+submit.init();
