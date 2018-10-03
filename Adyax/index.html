@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>dyax</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo container">
+        <img src="images/logo.png" alt="logo img">
+      </div>
+    </header>
+    <main class="main">
+      <section class="section-with-text">
+        <div class="section-with-text__wrapper container">
+          <h1 class="section-with-text__header">Frond-End Developer<span class="dot">.</span></h1>
+          <p class="section-with-text__text">Adyax’s core values take top priority: we care for our client, and we care for our people. Staff and clients work in partnership with consistent,  transparent communication.</p>
+        </div>
+      </section>
+      <section class="section-with-form container">
+        <form id="form" action="" method="get" role="form">
+          <section class="section__form--first">
+            <div class="col-1-of-2">
+              <div class="form-field">
+                <label class="input-label" for="name">YOUR NAME</label>
+                <input id="name" name="name" type="text">
+              </div>
+
+              <div class="form-field">
+                <label class="input-label" for="email">YOUR EMAIL</label>
+                <input id="email" name="email" type="email">
+              </div>
+
+              <div class="form-field">
+                <label class="input-label" for="portfolio">YOUR PORTOLIO / GITHUB</label>
+                <input id="portfolio" name="portfolio" type="text">
+              </div>
+
+              <div class="form-field radio-section">
+                <p>Graduated from htmlacademy.ru?</p>
+                <div class="radio-wrapper">
+                  <input type="radio" id="radio" name="graduate" class="radio">
+                  <label for="radio">YES</label>
+                  <input type="radio" id="radio1" name="graduate" class="radio">
+                  <label for="radio1" class="radio-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-1-of-2">
+              <div class="form-field">
+                <label class="input-label" for="textarea">MESSAGE</label>
+                <textarea id="textarea" class="textarea-message"></textarea>
+              </div>
+              <div class="form-field">
+                <div class="file-upload">
+                  <label>
+                    <input type="file" name="file">
+                    <span>UPLOAD</span>
+                  </label>
+                </div>
+                <label class="input-label">CV</label>
+                <input type="text" id="text" class="text" placeholder="Choose file">
+                <input type="text" id="filename" class="filename" disabled>
+
+              </div>
+            </div>
+          </section>
+          <section class="section__form--second">
+            <p class="section__form--second__text">* Please mark skills you are best in, and types of tasks you are good at </p>
+            <div class="section__form--second__wrapper">
+              <div class="section__form--second__left--block">
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="jQuery" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="jQuery">jQuery</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="grunt" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="grunt">Use GRUNT</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="haml" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="haml">HAML</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="sass" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="sass">SASS</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="less" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="less">LESS</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="coffee-script" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="coffee-script">CoffeeScript</label>
+                </div>
+              </div>
+              <div class="section__form--second__right--block">
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="jade" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="jade">Jade</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="stylus" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="stylus">Stylus</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="angular" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="angular">Know Angular</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="android" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="android">Front-end development for Android</label>
+                </div>
+                <div class="form-field checkbox-field">
+                  <input class="info-checkbox" id="ios" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="ios">Front-end development for iOS</label>
+                </div>
+                <div class="form-field">
+                  <input class="info-checkbox" id="windows-phone" name="remember" type="checkbox">
+                  <label class="info-label-for-checkbox" for="windows-phone">Front-end development for Windows Phone</label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="button__container container">
+            <div class="button-wrapper ">
+              <button class="button" id="submit_button" type="submit">Submit</button>
+              <div class="block-beyond"></div>
+            </div>
+          </div>
+
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <p class="footer__wrapper--text"> Adyax specializes in working with multi-national, multi-brand companies on a wide range of customer, client and employee-facing solutions.</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script>
+        $(document).ready( function() {
+            $(".file-upload input[type=file]").change(function(){
+                var filename = $(this).val().replace(/.*\\/, "");
+                $("#filename").val(filename);
+            });
+        });
+    </script>
+  </body>
+</html>
