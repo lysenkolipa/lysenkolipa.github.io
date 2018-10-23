@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header__wrapper">
+            <p class="header__wrapper--text">Select currency to exhange:</p>
+            <div class="selectBox">
+                <input type="hidden" value="value 1" class="price_values">
+                <span class="selected">USD</span>
+                <img src="images/arrow.png" alt="" class="selectArrow">
+                <ul class="selectOptions" style="display: none;">
+                    <li class="selectOption" data-value="value 1">USD</li>
+                    <li class="selectOption" data-value="value 2">EUR</li>
+                    <li class="selectOption" data-value="value 3">RUB</li>
+                    <li class="selectOption" data-value="value 4">GBP</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="body__wrapper">
+            <div class="block success" id="eth">
+                <div class="block__header">
+                    <h3>Ethereum</h3>
+                    <div class="img__wrapper">
+                        <img src="images/Bitcoin.png">
+                    </div>
+                </div>
+                <div class="block__body">
+                    <table>
+                        <tr class="total-price">
+                            <td>Price:</td>
+                            <td>$22 526.92</td>
+                        </tr>
+                        <tr class="toggle-block">
+                            <td>Percent change</td>
+                            <td>
+                                <label class="el-switch">
+                                    <input type="checkbox" name="switch" class="percent">
+                                    <span class="el-switch-style"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Hour change</td>
+                            <td class="positive-data hour-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Day change</td>
+                            <td class="positive-data day-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Week change</td>
+                            <td class="positive-data week-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Month change</td>
+                            <td class="positive-data month-data"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="block base" id="ltc">
+                <div class="block__header">
+                    <h3>Litecoin</h3>
+                    <div class="img__wrapper">
+                        <img src="images/Bitcoin.png">
+                    </div>
+
+                </div>
+                <div class="block__body">
+                    <table>
+                        <tr class="total-price">
+                            <td>Price:</td>
+                            <td>$22 526.92</td>
+                        </tr>
+                        <tr class="toggle-block">
+                            <td>Percent change</td>
+                            <td>
+                                <label class="el-switch">
+                                    <input type="checkbox" name="switch" class="percent">
+                                    <span class="el-switch-style"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Hour change</td>
+                            <td class="positive-data hour-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Day change</td>
+                            <td class="positive-data day-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Week change</td>
+                            <td class="positive-data week-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Month change</td>
+                            <td class="positive-data month-data"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="block warning" id="btc">
+                <div class="block__header">
+                    <h3>Bitcoin</h3>
+                    <div class="img__wrapper">
+                        <img src="images/Bitcoin.png">
+                    </div>
+                </div>
+                <div class="block__body">
+                    <table>
+                        <tr class="total-price">
+                            <td>Price:</td>
+                            <td>$22 526.92</td>
+                        </tr>
+                        <tr class="toggle-block">
+                            <td>Percent change</td>
+                            <td>
+                                <label class="el-switch">
+                                    <input type="checkbox" name="switch" class="percent">
+                                    <span class="el-switch-style"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Hour change</td>
+                            <td class="positive-data hour-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Day change</td>
+                            <td class="positive-data day-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Week change</td>
+                            <td class="positive-data week-data"></td>
+                        </tr>
+                        <tr>
+                            <td class="opacity-text">Month change</td>
+                            <td class="positive-data month-data"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
